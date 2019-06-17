@@ -1,0 +1,206 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    background: url(bwimage.png) no-repeat center center fixed;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, .8);
+    background-blend-mode: screen;
+    border: solid 1px rgb(245, 53, 213);
+    display: block;
+    padding: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    box-shadow : 0px 0px 5px rgb(252, 255, 84);
+    font-family: 'Noto Sans KR', sans-serif;
+    color: rgba(0,0,0,0.7);
+    font-weight: lighter;
+  }
+  
+  h1 {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color:rgb(245, 53, 213);
+    font-size: 50px;
+    font-family: 'Allerta Stencil', sans-serif;
+    font-weight: bolder;
+    margin-bottom: 15px;
+    background-blend-mode: screen;
+  }
+  
+  #js-form {
+    margin-top: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  label {
+    font-size: 20px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: lighter;
+  }
+  
+  #js-search-term {
+    width: 40%;
+    margin: 20px;
+    border: solid lightgrey 2px;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow : 0px 0px 5px rgba(0,0,0,0.7);
+  }
+  
+  .go {
+    width: 40%;
+    background: rgb(33, 211, 255);
+    border: solid 2px;
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+    font-size: 15px;
+    box-shadow : 0px 0px 5px rgba(0,0,0,0.7);
+  }
+  
+  button:hover {
+    cursor: pointer;
+    background-color:rgb(252, 255, 84);
+    transition: all 0.3s ease;
+    color:  rgba(0,0,0,0.7);
+    border: solid 1px;
+  }
+  
+  .error-message {
+      color: red;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  
+  .hidden2 {
+    display: none;
+  }
+  
+  
+  ul {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  
+  li {
+    list-style-type: none;
+    margin-bottom: 45px;
+    padding: 0;
+    border-bottom: solid lightgrey 2px;
+  }
+  
+  h2 {
+    font-size: 25px;
+    text-align: center;
+    color:  rgba(0,0,0,0.7);
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: lighter;
+    margin-top: 30px;
+    margin-bottom: 50px;
+  }
+  
+  .list-item {
+    color:  rgba(0,0,0,0.7);
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: lighter;
+    font-size: 17px;
+  }
+  
+  a {
+    text-decoration: none;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: lighter;
+    color: rgba(135, 58, 197, 0.7);
+    font-size: 20px;
+  }
+  
+  .button-controls {
+    display: inline;
+  }
+  
+  .add-item {
+    background: rgb(33, 211, 255);
+    border: solid 1px;
+    border-radius: 50%;
+    width: 25px;
+    color: white;
+    font-size: 20px;
+    box-shadow : 0px 0px 5px rgba(0,0,0,0.7);
+    margin-left: 10px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 2px;
+    padding-right: 2px;
+    float: right;
+  }
+  
+  .disclaimer {
+   color:  rgba(0,0,0,0.7);
+   font-family: 'Noto Sans KR', sans-serif;
+   font-weight: lighter;
+   font-size: 14px;
+   margin-top: 150px;
+  }
+  
+  #interaction-box {
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+  }
+  
+  .interaction-list {
+    list-style-type: decimal;
+    list-style-position: inside;
+    margin-bottom: 25px;
+  }
+  
+  ol {
+    text-align: center;
+    display: flex;
+    padding: 0px;
+  }
+  
+  .get {
+    width: auto;
+    background: rgb(245, 53, 213);
+    border: solid 2px;
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+    font-size: 15px;
+    box-shadow : 0px 0px 5px rgba(0,0,0,0.7);
+    margin: 5px;
+    position: center;
+    bottom: 0px;
+  }
+  
+  #interaction-wrapper {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    border: solid lightgrey 2px;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow : 0px 0px 5px rgba(0,0,0,0.7);
+    color: rgba(0,0,0,0.7);
+    background-color: white;
+    font-family: 'Noto Sans KR', sans-serif;
+    text-align: center;
+    width: 60%;
+  }
+  

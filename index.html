@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="MedMix Drug Interaction Checker" content="A portfolio of web developemnt work for Nathan Blanchard.">
+	<title>MedMix - Drug Interaction Checker</title>
+	<link rel="stylesheet" href="main.css">
+  <link href="https://fonts.googleapis.com/css?family=Allerta+Stencil&display=swap" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>MedMix</h1>
+    <p>Discover the interaction between two or more drugs. Type a drug name in the search field and click the "Get Drugs" button. Add a drug from the search results using the + button and then click "Get Interactions."</p>
+  
+
+    <form id="js-form">
+      <label for="search-term">Enter Drug Name</label> <input type="text" placeholder="e.g., tylenol" name="search-term" id="js-search-term" required>
+      <button class="go" type="submit">Get Drugs</button>
+    </form>
+
+  <div id="interaction-wrapper" class="hidden2">
+    <ol id="interaction-box"></ol>
+    <button class="get" type="submit">Get Interactions</button>
+    </div>
+
+    <p id="js-error-message" class="error-message"></p>
+
+    <section id="results" class="hidden">
+      <h2 class="list-title"></h2>
+      <ul id="results-list">
+      </ul>
+    </section>
+
+    <section class="disclaimer">
+      <p>This product uses publicly available data from the U.S. National Library of Medicine (NLM), National Institutes of Health, Department of Health and Human Services; NLM is not responsible for the product and does not endorse or recommend this or any other product.</p>
+      <p>Discalimer: It is not the intention of NLM to provide specific medical advice, but rather to provide users with information to better understand their health and their medications. NLM urges you to consult with a qualified physician for advice about medications.</p>
+    </section>
+  </div>
+  
+  <script src="data.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>
