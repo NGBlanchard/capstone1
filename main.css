@@ -78,8 +78,12 @@
   }
   
   .error-message {
-      color: red;
-  }
+    color: red;
+    font-weight: bolder;
+    font-size: 25px;
+    margin-top: 30px;
+    text-align: center;
+}
   
   .hidden {
     display: none;

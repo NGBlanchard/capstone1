@@ -8,12 +8,27 @@ const interactionURL = "https://rxnav.nlm.nih.gov/REST/interaction/list.json?rxc
 
 //retrieves data from API based on search term
 function getRxcui(searchTerm) {
+  $('#js-error-message').empty();
   $('#js-search-term').val("");
   fetch(getURL + searchTerm)
-  .then(response => response.json())
-  .then(responseJson => sweepData(responseJson))
-  .catch(error => console.log(error));
+   .then(response => response.json())
+  .then(responseJson => legitName(responseJson))
+  .catch(error => {
+    $('#js-error-message').text(`Something went wrong. Please submit a valid drug name.`);
+  });
   }
+
+function legitName(responseJson){
+var nameArray =
+  responseJson.drugGroup.conceptGroup.filter(conceptGroup => conceptGroup.conceptProperties);
+  for (let i = 0; i < nameArray.length; i++){
+    if (nameArray[i].conceptProperties){
+      sweepData(responseJson);
+      }
+  else {$('#js-error-message').text(`Something went wrong. Please submit a valid drug name.`)
+      }
+}
+}
 
 //filters data for drug synonym and rxcui
 function sweepData(responseJson) {
@@ -110,7 +125,7 @@ function finalFetch(){
   fetch(finalInteractionURL)
   .then(response => response.json())
   .then(responseJson2 => displayInteractions(responseJson2))
-  .catch(error => console.log(error));
+  .catch(error => $('#js-error-message').text(`Something went wrong. Please add more drugs.`));
 }
 
 //displays the interactions between drugs in the list of added drugs
