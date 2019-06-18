@@ -105,8 +105,13 @@ function displayInteractionBox(newEntry) {
 
 function deleteDrug(){
   $("#interaction-wrapper").on("click", ".delete-item", function(event) {
-  $(event.currentTarget).closest('li').remove();
-  finalSearch.pop();
+    $(event.currentTarget).closest('li').remove();
+    let deleteEntry = $(event.currentTarget).closest('li').find('.list-item').text();
+    // var index = referName.indexOf(deleteEntry);
+    // if (index > -1) {
+    //   referName.splice(index);
+     console.log(referName);
+    
 });
 }
 
@@ -181,9 +186,10 @@ function restart(){
     $('#results-list').empty();
     $('.list-title').empty();
     $("#interaction-box").empty();
-    bothData.empty();
-    referName.empty();
-    finalSearch.empty();
+    $("#js-error-message").empty();
+    bothData.length = 0;
+    referName.length = 0;
+    finalSearch.length = 0;
     $('#interaction-wrapper').toggleClass('hidden2');
 });
 }
