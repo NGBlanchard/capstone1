@@ -91,12 +91,23 @@ function addDrug(){
 });
 }
 
-
 //displays the interaction search box
 function displayInteractionBox(newEntry) {
   //console.log(newEntry);
-  $("#interaction-box").append(`<li class="interaction-list">${newEntry}</li>`);
+  $("#interaction-box").append(`<li class="interaction-list">${newEntry} <div class="button-controls">
+  <button class="delete-item">
+  <span class="button-label">-</span>
+  </button>
+</div></li>`);
   $('#interaction-wrapper').removeClass('hidden2');
+}
+
+
+function deleteDrug(){
+  $("#interaction-wrapper").on("click", ".delete-item", function(event) {
+  $(event.currentTarget).closest('li').remove();
+  finalSearch.pop();
+});
 }
 
 //this will pair the search term with its rxcui
@@ -164,7 +175,22 @@ function watchForm() {
   });
 }
 
+function restart(){
+  $("#interaction-wrapper").on("click", ".restart", function(event) {
+    event.preventDefault();
+    $('#results-list').empty();
+    $('.list-title').empty();
+    $("#interaction-box").empty();
+    bothData.empty();
+    referName.empty();
+    finalSearch.empty();
+    $('#interaction-wrapper').toggleClass('hidden2');
+});
+}
+
 //call stack :)
 $(watchForm);
 $(addDrug);
 $(watchBox);
+$(deleteDrug);
+$(restart);

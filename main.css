@@ -151,6 +151,38 @@
     padding-right: 2px;
     float: right;
   }
+
+  .added {
+    background: "Added";
+    border: solid 1px;
+    border-radius: 50%;
+    width: 25px;
+    color: rgb(33, 211, 255);
+    font-size: 20px;
+    box-shadow : 0px 0px 5px rgba(0,0,0,0.7);
+    margin-left: 10px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 2px;
+    padding-right: 2px;
+    float: right;
+  }
+
+  .delete-item {
+    background: rgb(33, 211, 255);
+    border: solid 1px;
+    border-radius: 50%;
+    width: 25px;
+    color: white;
+    font-size: 20px;
+    box-shadow : 0px 0px 5px rgba(0,0,0,0.7);
+    margin-left: 10px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 2px;
+    padding-right: 2px;
+    float: right;
+  }
   
   .disclaimer {
    color:  rgba(0,0,0,0.7);
@@ -206,5 +238,27 @@
     font-family: 'Noto Sans KR', sans-serif;
     text-align: center;
     width: 60%;
+  }
+
+    
+  .restart {
+    background: rgb(252, 255, 84);
+    border: solid 2px white;
+    border-radius: 5px;
+    width: auto;
+    color: rgba(0,0,0,0.7);
+    font-size: 20px;
+    box-shadow : 0px 0px 5px rgba(0,0,0,0.7);
+    padding: 10px;
+    font-size: 15px;
+    margin: 5px;
+  }
+
+  .restart:hover {
+    cursor: pointer;
+    background-color:rgba(0,0,0,0.7);
+    transition: all 0.3s ease;
+    color:  rgb(252, 255, 84);
+    border: solid 1px;
   }
   
