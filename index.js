@@ -15,9 +15,9 @@ function getRxcui(searchTerm) {
   .then(responseJson => sweepData(responseJson))
   .catch(error => {
     $('#js-error-message').text(`Something went wrong. Please submit a valid drug name.`);
+    $('.list-title').empty();
   });
   }
-
 
 //filters data for drug synonym and rxcui
 function sweepData(responseJson) {
@@ -37,8 +37,6 @@ function sweepData(responseJson) {
   makeNewThing(names, rxcuis)
 }
 
-
-
 //combines the drug name and drug rxcui numbers into one array of objects and pushes it to global value, passes the search results along to display function
 function makeNewThing(names, rxcuis){
   const searchData = names.map((el, index) => {
@@ -47,16 +45,16 @@ function makeNewThing(names, rxcuis){
       }
   });
   const dino = Object.assign(...names.map((k, i) => ({[k]: rxcuis[i]})));
-
-  bothData.push(dino);
   
+  bothData.push(dino);
   displayOptions(searchData);
 }
 
 
 //displays synonym options for user to select
   function displayOptions(searchData){
-    for (let i = 0; i < searchData.length; i++){
+    for (let i = 0; i < searchData.length; i++) {
+    if (Object.keys(searchData[i]) != '') {
     $('#results-list').append(
        `<li>
           <span class="list-item">${Object.keys(searchData[i])}</span>
@@ -67,7 +65,7 @@ function makeNewThing(names, rxcuis){
           </div>
        </li>`
      );
-    }
+    }}
   $('#results').removeClass('hidden');
 }
 
@@ -95,6 +93,8 @@ function displayInteractionBox(newEntry) {
 
 function deleteDrug(){
   $("#interaction-wrapper").on("click", ".delete-item", function(event) {
+    $('#results-list').empty();
+    $('.list-title').empty();
     $(event.currentTarget).closest('li').remove();
     let deleteEntry = $(event.currentTarget).closest('li').find('.interaction-item').text();
   
@@ -132,8 +132,6 @@ function watchBox() {
 function finalFetch(){
   const semiFinalSearch = searchArray.join("+");
   finalSearch.push(semiFinalSearch);
-  console.log(semiFinalSearch);
-
   var finalInteractionURL = interactionURL + finalSearch[finalSearch.length-1];
   //console.log(finalInteractionURL);
   fetch(finalInteractionURL)
