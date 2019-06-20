@@ -144,22 +144,27 @@ function finalFetch(){
 function displayInteractions(responseJson2){
   $('#results-list').empty();
   $('.list-title').empty();
+  var finalData2 = [];
   for (let i = 0; i < responseJson2.fullInteractionTypeGroup.length; i++){
     var finalData = responseJson2.fullInteractionTypeGroup[i].fullInteractionType
-    
   for (let i = 0; i < finalData.length; i++) {
       var finalData1 = finalData[i].interactionPair
       
   for (let i = 0; i < finalData1.length; i++){
-      var finalData2 = finalData1[i].description
-      
-  $('#results-list').append(
-       `<li>
-          ${finalData2}
-       </li>`
-      );
+      finalData2.push(finalData1[i].description)
       }
     }
+  }
+  var uniqueData = [];
+    $.each(finalData2, function(i, el){
+        if($.inArray(el, uniqueData) === -1) uniqueData.push(el);
+    });
+  for (let i = 0; i < uniqueData.length; i++){  
+    $('#results-list').append(
+        `<li>
+            ${uniqueData[i]}
+        </li>`
+    );
   }
 }
 
