@@ -67,9 +67,6 @@ function makeNewThing(names, rxcuis){
      );
     }}
   $('#results').removeClass('hidden');
-  // $("#results").fadeIn("slow", function() {
-  //   $("#results").removeClass("hidden");
-//});
 }
 
 
@@ -91,7 +88,10 @@ function displayInteractionBox(newEntry) {
   <span class="button-label">-</span>
   </button>
 </div></li>`);
-  $('#interaction-wrapper').removeClass('hidden2');
+  //$('#interaction-wrapper').removeClass('hidden2');
+  $("#interaction-wrapper").fadeIn("slow", function() {
+    $("#interaction-wrapper").removeClass("hidden2");
+});
 }
 
 
@@ -166,7 +166,7 @@ function displayInteractions(responseJson2){
     });
   for (let i = 0; i < uniqueData.length; i++){  
     $('#results-list').append(
-        `<li>
+        `<li class="interact">
             ${uniqueData[i]}
         </li>`
     );

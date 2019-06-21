@@ -71,6 +71,12 @@
     font-size: 15px;
     box-shadow : 0px 0px 5px rgba(0,0,0,0.7);
   }
+
+  button:active {
+    background-color: rgb(197, 199, 65);
+    box-shadow: 0px 3px 5px rgba(0,0,0,0.7);
+    transform: translateY(4px);
+  }
   
   button:hover {
     cursor: pointer;
@@ -126,7 +132,21 @@
     font-family: 'Noto Sans KR', sans-serif;
     font-weight: lighter;
     font-size: 17px;
+    animation: stage 1s;
   }
+
+  .interact{
+    animation: stage 1s;
+  }
+
+  @keyframes stage {
+    from {
+      margin-left: -100%;
+    }
+    to {
+      margin-left: 0%;
+  }
+}
   
   a {
     text-decoration: none;
@@ -152,7 +172,19 @@
     position: absolute;
     bottom: 5px;
     right: 0;
+    animation: stage-right 1s;
   }
+
+  @keyframes stage-right {
+    from {
+      margin-right: -100%;
+    }
+    to {
+      margin-right: 0%;
+    }
+  }
+
+  
 
   #check {
     color: rgb(245, 53, 213);
@@ -190,7 +222,7 @@
    font-family: 'Noto Sans KR', sans-serif;
    font-weight: lighter;
    font-size: 14px;
-   margin-top: 150px;
+   margin-top: 100px;
   }
   
   #interaction-box {
