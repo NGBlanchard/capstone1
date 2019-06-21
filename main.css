@@ -1,19 +1,20 @@
+/* main css optimized for iphone 5 width (320px) */
+
 * {
     box-sizing: border-box;
   }
   
   body {
-    background: url(bwimage.png) no-repeat center center fixed;
+    background: rgb(211, 211, 211);
   }
   
   .container {
-    max-width: 800px;
     margin: 0 auto;
     background-color: rgba(255, 255, 255, .8);
     background-blend-mode: screen;
     border: solid 1px rgb(245, 53, 213);
     display: block;
-    padding: 40px;
+    padding: 10px;
     margin-left: auto;
     margin-right: auto;
     border-radius: 5px;
@@ -21,6 +22,7 @@
     font-family: 'Noto Sans KR', sans-serif;
     color: rgba(0,0,0,0.7);
     font-weight: lighter;
+    font-size: 17px;
   }
   
   h1 {
@@ -28,7 +30,7 @@
     margin-right: auto;
     text-align: center;
     color:rgb(245, 53, 213);
-    font-size: 50px;
+    font-size: 65px;
     font-family: 'Allerta Stencil', sans-serif;
     font-weight: bolder;
     margin-bottom: 15px;
@@ -56,6 +58,7 @@
     border-radius: 5px;
     padding: 10px;
     box-shadow : 0px 0px 5px rgba(0,0,0,0.7);
+    font-size: 17px;
   }
   
   .go {
@@ -74,13 +77,13 @@
     background-color:rgb(252, 255, 84);
     transition: all 0.3s ease;
     color:  rgba(0,0,0,0.7);
-    border: solid 1px;
+    border: solid 2px;
   }
   
   .error-message {
     color: red;
     font-weight: bolder;
-    font-size: 25px;
+    font-size: 20px;
     margin-top: 30px;
     text-align: center;
 }
@@ -96,15 +99,16 @@
   
   
   ul {
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
   
   li {
     list-style-type: none;
     margin-bottom: 45px;
-    padding: 0;
     border-bottom: solid lightgrey 2px;
+    position: relative;
+    padding-right: 50px;
   }
   
   h2 {
@@ -132,42 +136,37 @@
     font-size: 20px;
   }
   
-  .button-controls {
-    display: inline;
-  }
   
   .add-item {
     background: rgb(33, 211, 255);
     border: solid 1px;
     border-radius: 50%;
-    width: 25px;
+    width: 35px;
     color: white;
-    font-size: 20px;
+    font-size: 25px;
     box-shadow : 0px 0px 5px rgba(0,0,0,0.7);
-    margin-left: 10px;
     padding-top: 0px;
-    padding-bottom: 0px;
+    padding-bottom: 1px;
     padding-left: 2px;
     padding-right: 2px;
-    float: right;
+    position: absolute;
+    bottom: 5px;
+    right: 0;
   }
 
-  .added {
-    background: "Added";
-    border: solid 1px;
-    border-radius: 50%;
-    width: 25px;
-    color: rgb(33, 211, 255);
-    font-size: 20px;
-    box-shadow : 0px 0px 5px rgba(0,0,0,0.7);
-    margin-left: 10px;
+  #check {
+    color: rgb(245, 53, 213);
+    font-size: 25px;
     padding-top: 0px;
-    padding-bottom: 0px;
+    padding-bottom: 1px;
     padding-left: 2px;
     padding-right: 2px;
-    float: right;
+    position: absolute;
+    bottom: 5px;
+    right: 0;
   }
 
+  
   .delete-item {
     background: rgb(33, 211, 255);
     border: solid 1px;
@@ -181,7 +180,9 @@
     padding-bottom: 0px;
     padding-left: 2px;
     padding-right: 2px;
-    float: right;
+    position: absolute;
+    bottom: 3px;
+    right: 0;
   }
   
   .disclaimer {
@@ -237,7 +238,7 @@
     background-color: white;
     font-family: 'Noto Sans KR', sans-serif;
     text-align: center;
-    width: 60%;
+    width: 95%;
   }
 
     
@@ -259,5 +260,6 @@
     background-color:rgba(0,0,0,0.7);
     transition: all 0.3s ease;
     color:  rgb(252, 255, 84);
-    border: solid 1px;
+    border: solid 2px;
   }
+  

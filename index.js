@@ -59,14 +59,17 @@ function makeNewThing(names, rxcuis){
        `<li>
           <span class="list-item">${Object.keys(searchData[i])}</span>
           <div class="button-controls">
+          <div id="check" class="hidden">&#10003;</div>
             <button class="add-item">
             <span class="button-label">+</span>
-            </button>
           </div>
        </li>`
      );
     }}
   $('#results').removeClass('hidden');
+  // $("#results").fadeIn("slow", function() {
+  //   $("#results").removeClass("hidden");
+//});
 }
 
 
@@ -76,6 +79,8 @@ function addDrug(){
   let newEntry = $(event.currentTarget).closest('li').find('.list-item').text();
   displayInteractionBox(newEntry);
   getGroup(newEntry);
+  $(event.currentTarget).fadeOut("medium");
+  $(event.currentTarget).closest('li').find('#check').fadeIn("slow");
 });
 }
 
@@ -95,7 +100,7 @@ function deleteDrug(){
   $("#interaction-wrapper").on("click", ".delete-item", function(event) {
     $('#results-list').empty();
     $('.list-title').empty();
-    $(event.currentTarget).closest('li').remove();
+    $(event.currentTarget).closest('li').fadeOut("medium");
     let deleteEntry = $(event.currentTarget).closest('li').find('.interaction-item').text();
   
   for (let i = 0; i < bothData.length; i++){
