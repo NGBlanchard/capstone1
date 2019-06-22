@@ -17,9 +17,11 @@ You can:
   - Add and remove drugs from your list
   - Generate a list of interactions between the drugs on your list
 
-Homepage:
-[Homepage](screenshots/homepage.png)
-[https://github.com/NGBlanchard/medmix//master/screenshots/homepage.png|alt=homepage]
+Screenshots:
+screenshots/homepage.png
+screenshots/search1.png
+screenshots/search2.png
+screenshots/results.png
 
 ### Technology Used
 
