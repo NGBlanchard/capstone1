@@ -18,7 +18,7 @@ You can:
   - Generate a list of interactions between the drugs on your list
 
 Homepage:
-[[https://github.com/NGBlanchard/medmix//master/screenshots/homepage.png|alt=homepage]]
+[Homepage](screenshots/homepage.png)
 
 ### Technology Used
 
