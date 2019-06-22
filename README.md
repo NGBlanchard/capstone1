@@ -19,13 +19,13 @@ You can:
 
 # Screenshots
 Homepage:
-![Homepage](/screenshots/homepage.png)
+![Homepage](/screenshots/homepage2.png)
 First Search:
 ![First Search](/screenshots/search1.png)
 Second Search:
-![Second Search](/screenshots/search2.png)
+![Second Search](/screenshots/search22.png)
 Results Screen:
-![Results](/screenshots/results.png)
+![Results](/screenshots/results2.png)
 
 ### Technology Used
 
