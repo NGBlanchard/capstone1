@@ -3,8 +3,8 @@
 const bothData = [];
 const searchArray = [];
 const finalSearch = [];
-const getURL = "https://rxnav.nlm.nih.gov/REST/drugs.json?name="
-const interactionURL = "https://rxnav.nlm.nih.gov/REST/interaction/list.json?rxcuis=";
+const getURL = 'https://rxnav.nlm.nih.gov/REST/drugs.json?name='
+const interactionURL = 'https://rxnav.nlm.nih.gov/REST/interaction/list.json?rxcuis=';
 
 //retrieves data from API based on search term
 function getRxcui(searchTerm) {
@@ -57,11 +57,11 @@ function makeNewThing(names, rxcuis){
     if (Object.keys(searchData[i]) != '') {
     $('#results-list').append(
        `<li>
-          <span class="list-item">${Object.keys(searchData[i])}</span>
-          <div class="button-controls">
-          <div id="check" class="hidden">&#10003;</div>
-            <button class="add-item">
-            <span class="button-label">+</span>
+          <span class='list-item'>${Object.keys(searchData[i])}</span>
+          <div class='button-controls'>
+          <div id='check' class='hidden'>&#10003;</div>
+            <button class='add-item'>
+            <span class='button-label'>+</span>
           </div>
        </li>`
      );
@@ -72,35 +72,33 @@ function makeNewThing(names, rxcuis){
 
 //watches for button to add drug to interaction search box
 function addDrug(){
-  $("#results-list").on("click", ".add-item", function(event) {
+  $('#results-list').on('click', '.add-item', function(event) {
   let newEntry = $(event.currentTarget).closest('li').find('.list-item').text();
   displayInteractionBox(newEntry);
   getGroup(newEntry);
-  $(event.currentTarget).fadeOut("medium");
-  $(event.currentTarget).closest('li').find('#check').fadeIn("slow");
+  $(event.currentTarget).fadeOut('medium');
+  $(event.currentTarget).closest('li').find('#check').fadeIn('slow');
 });
 }
 
 //displays the interaction search box
 function displayInteractionBox(newEntry) {
-  $("#interaction-box").append(`<li class="interaction-list"><span class="interaction-item">${newEntry}</span><div class="button-controls">
-  <button class="delete-item">
+  $('#interaction-box').append(`<li class='interaction-list'><span class='interaction-item'>${newEntry}</span><div class='button-controls'>
+  <button class='delete-item'>
   <span class="button-label">-</span>
   </button>
 </div></li>`);
-  //$('#interaction-wrapper').removeClass('hidden2');
   $("#interaction-wrapper").fadeIn("slow", function() {
     $("#interaction-wrapper").removeClass("hidden2");
 });
 }
 
 
-
 function deleteDrug(){
-  $("#interaction-wrapper").on("click", ".delete-item", function(event) {
+  $('#interaction-wrapper').on('click', '.delete-item', function(event) {
     $('#results-list').empty();
     $('.list-title').empty();
-    $(event.currentTarget).closest('li').fadeOut("medium");
+    $(event.currentTarget).closest('li').fadeOut('medium');
     let deleteEntry = $(event.currentTarget).closest('li').find('.interaction-item').text();
   
   for (let i = 0; i < bothData.length; i++){
@@ -125,7 +123,7 @@ function getGroup(newEntry) {
 }
 
 function watchBox() {
-  $("#interaction-wrapper").on("click", ".get", function(event) {
+  $('#interaction-wrapper').on('click', '.get', function(event) {
     event.preventDefault();
     $('#results-list').empty();
     $('.list-title').empty();
@@ -138,7 +136,6 @@ function finalFetch(){
   const semiFinalSearch = searchArray.join("+");
   finalSearch.push(semiFinalSearch);
   var finalInteractionURL = interactionURL + finalSearch[finalSearch.length-1];
-  //console.log(finalInteractionURL);
   fetch(finalInteractionURL)
   .then(response => response.json())
   .then(responseJson2 => displayInteractions(responseJson2))
@@ -166,7 +163,7 @@ function displayInteractions(responseJson2){
     });
   for (let i = 0; i < uniqueData.length; i++){  
     $('#results-list').append(
-        `<li class="interact">
+        `<li class='interact'>
             ${uniqueData[i]}
         </li>`
     );
@@ -186,12 +183,12 @@ function watchForm() {
 }
 
 function restart(){
-  $("#interaction-wrapper").on("click", ".restart", function(event) {
+  $('#interaction-wrapper').on('click', '.restart', function(event) {
     event.preventDefault();
     $('#results-list').empty();
     $('.list-title').empty();
-    $("#interaction-box").empty();
-    $("#js-error-message").empty();
+    $('#interaction-box').empty();
+    $('#js-error-message').empty();
     bothData.length = 0;
     searchArray.length = 0;
     finalSearch.length = 0;
