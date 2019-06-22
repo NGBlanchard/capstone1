@@ -19,6 +19,7 @@ You can:
 
 Homepage:
 [Homepage](screenshots/homepage.png)
+[https://github.com/NGBlanchard/medmix//master/screenshots/homepage.png|alt=homepage]
 
 ### Technology Used
 
