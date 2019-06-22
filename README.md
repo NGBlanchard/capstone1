@@ -18,10 +18,14 @@ You can:
   - Generate a list of interactions between the drugs on your list
 
 Screenshots:
-screenshots/homepage.png
-screenshots/search1.png
-screenshots/search2.png
-screenshots/results.png
+Homepage:
+(screenshots/homepage.png)
+First Search: 
+(screenshots/search1.png)
+Second Search:
+(screenshots/search2.png)
+Results:
+(screenshots/results.png)
 
 ### Technology Used
 
