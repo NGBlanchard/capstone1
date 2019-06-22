@@ -295,17 +295,9 @@
   
 /* iphone 6 width and bigger mobile devices */
 @media (min-width: 370px) {
-
-
-}
-
-@media (min-width: 450px) {
-
-
-}
-
-
-@media (min-width: 550px) {
+  .container {
+    max-width: 90%;
+  }
 
 }
 
