@@ -54,7 +54,7 @@ function makeNewThing(names, rxcuis){
 //displays synonym options for user to select
   function displayOptions(searchData){
     for (let i = 0; i < searchData.length; i++) {
-    if (Object.keys(searchData[i]) !== '') {
+    if (Object.keys(searchData[i]) != '') {
     $('#results-list').append(
        `<li>
           <span class='list-item'>${Object.keys(searchData[i])}</span>
